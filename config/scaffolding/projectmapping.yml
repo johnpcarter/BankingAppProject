@@ -6,11 +6,6 @@ runtimes:
   - name: Create Account For Customer
     type: workflow
     uid: fld3d733edaa9f38fe130cd2
-    stepId: a0
-    reference: jc.banking.pub:verifyUserAndGetId
-  - name: Create Account For Customer
-    type: workflow
-    uid: fld3d733edaa9f38fe130cd2
     stepId: a4
     reference: jc.banking.pub:createAccountForUser
   - name: Create Account For Customer
@@ -23,3 +18,8 @@ runtimes:
     uid: fld3d733edaa9f38fe130cd2
     stepId: a6
     reference: jc.banking.pub:getAccountsForCustomer
+  - name: Create Account For Customer
+    type: workflow
+    uid: fld3d733edaa9f38fe130cd2
+    stepId: a7
+    reference: jc.banking.pub:verifyCustomerAndGetId
