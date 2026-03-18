@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FLOW VERSION="3.2" CLEANUP="false">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<INVOKE NAME="JcBankingService" SERVICE="jc.banking.pub:verifyCustomerAndGetId">
+  <COMMENT></COMMENT>
+</INVOKE>
+
+<INVOKE NAME="JcBankingService" SERVICE="jc.banking.pub:getAccountsForCustomer">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+  <COMMENT></COMMENT>
+</MAP>
+
+<MAP MODE="OUTPUT">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAPDELETE FIELD="/customer_id;1;0">
+</MAPDELETE>
+
+<MAPDELETE FIELD="/full_name;1;0">
+</MAPDELETE>
+</MAP>
+</INVOKE>
+</FLOW>
