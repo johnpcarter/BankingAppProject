@@ -12,3 +12,5 @@ packages:
   gitUrl: https://github.com/johnpcarter
   gitUsername: johnpcarter
   gitBranch: main
+configurationVariables:
+  globalvariable.JcBankingService.isProduction.value: "false"
