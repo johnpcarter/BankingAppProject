@@ -10,17 +10,18 @@
   <null name="replication_services"/>
   <record name="requires" javaclass="com.wm.util.Values">
     <value name="JcBankingService">1.0.3</value>
+    <value name="WmJDBCAdapter">10.3.0.0.34</value>
   </record>
   <null name="listACL"/>
   <value name="webappLoad">yes</value>
   <value name="reloadWithDependentPackage">yes</value>
-  <value name="build">19</value>
+  <value name="build">20</value>
   <null name="description"/>
   <value name="created_date">18-03-2026 11:54:53 GMT</value>
   <null name="extendedProperties"/>
   <null name="target_server_version"/>
   <value name="isProjectPackage">true</value>
-  <value name="lastUpdated">2026-03-19T09:16:43.628766631Z</value>
+  <value name="lastUpdated">2026-03-19T12:28:26.428941745Z</value>
   <value name="wmProjectId">fl80618dd2a7470a96bd6461</value>
   <value name="creator">John Carter</value>
 </Values>

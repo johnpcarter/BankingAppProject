@@ -8,9 +8,112 @@ packages:
   gitUsername: johnpcarter
   gitBranch: main
 - name: JcBankingService
+  version: 1.0.3
   gitServerName: johnpcarter
   gitUrl: https://github.com/johnpcarter
   gitUsername: johnpcarter
   gitBranch: main
+- name: WmJDBCAdapter
+  wpmServer: https://packages.webmethods.io
+  wpmRegistry: licensed
+services:
+- serviceName: project.bankingapp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:bank_mysql_dev
+  packages:
+  - name: BankingAppProject
+    version: "1.0"
+  - name: JcBankingService
+    version: 1.0.3
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: project.bankingapp.integrations:getCustomerAccounts
+  packages:
+  - name: BankingAppProject
+    version: "1.0"
+  - name: JcBankingService
+    version: 1.0.3
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: jc.banking.pub:verifyCustomerAndGetId
+  packages:
+  - name: JcBankingService
+    version: 1.0.3
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: jc.banking._priv.db:getCustomerInfoForName
+  packages:
+  - name: JcBankingService
+    version: 1.0.3
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: jc.banking.pub:getAccountsForCustomer
+  packages:
+  - name: JcBankingService
+    version: 1.0.3
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: jc.banking._priv.db:getAccountsForUser
+  packages:
+  - name: JcBankingService
+    version: 1.0.3
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
 configurationVariables:
+  ? artConnection.BankingAppProject.project.bankingapp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.bank_mysql_dev.connectionSettings.networkProtocol
+  : ""
+  ? artConnection.BankingAppProject.project.bankingapp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.bank_mysql_dev.connectionSettings.serverName
+  : mysql-dev
+  ? artConnection.BankingAppProject.project.bankingapp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.bank_mysql_dev.connectionManagerSettings.heartBeatInterval
+  : "0"
+  ? artConnection.BankingAppProject.project.bankingapp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.bank_mysql_dev.connectionSettings.user
+  : scratch
+  ? artConnection.BankingAppProject.project.bankingapp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.bank_mysql_dev.connectionSettings.password
+  : "{AES}Y5IgMqjfvkgbg7p5VUZztw=="
+  ? artConnection.BankingAppProject.project.bankingapp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.bank_mysql_dev.connectionSettings.otherProperties
+  : loginTimeout=60;
+  ? artConnection.BankingAppProject.project.bankingapp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.bank_mysql_dev.connectionSettings.keyStore
+  : ""
+  ? artConnection.BankingAppProject.project.bankingapp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.bank_mysql_dev.connectionManagerSettings.blockingTimeout
+  : "1000"
+  ? artConnection.BankingAppProject.project.bankingapp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.bank_mysql_dev.connectionSettings.driverType
+  : default
+  ? artConnection.BankingAppProject.project.bankingapp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.bank_mysql_dev.connectionSettings.databaseName
+  : scratch
+  ? artConnection.BankingAppProject.project.bankingapp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.bank_mysql_dev.connectionManagerSettings.startupBackoffSecs
+  : "10"
+  ? artConnection.BankingAppProject.project.bankingapp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.bank_mysql_dev.connectionManagerSettings.minimumPoolSize
+  : "1"
+  ? artConnection.BankingAppProject.project.bankingapp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.bank_mysql_dev.connectionManagerSettings.startupRetryCount
+  : "0"
+  ? artConnection.BankingAppProject.project.bankingapp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.bank_mysql_dev.connectionSettings.portNumber
+  : "3306"
+  ? artConnection.BankingAppProject.project.bankingapp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.bank_mysql_dev.connectionManagerSettings.poolIncrementSize
+  : "1"
   globalvariable.JcBankingService.isProduction.value: "false"
+  ? artConnection.BankingAppProject.project.bankingapp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.bank_mysql_dev.connectionSettings.dbType
+  : MySQL
+  ? artConnection.BankingAppProject.project.bankingapp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.bank_mysql_dev.connectionEnabled
+  : "false"
+  ? artConnection.BankingAppProject.project.bankingapp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.bank_mysql_dev.connectionSettings.transactionType
+  : NO_TRANSACTION
+  ? artConnection.BankingAppProject.project.bankingapp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.bank_mysql_dev.connectionManagerSettings.maximumPoolSize
+  : "10"
+  ? artConnection.BankingAppProject.project.bankingapp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.bank_mysql_dev.connectionSettings.trustStore
+  : ""
+  ? artConnection.BankingAppProject.project.bankingapp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.bank_mysql_dev.connectionManagerSettings.poolable
+  : "true"
+  ? artConnection.BankingAppProject.project.bankingapp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.bank_mysql_dev.connectionSettings.datasourceClass
+  : com.mysql.cj.jdbc.MysqlDataSource
+  ? artConnection.BankingAppProject.project.bankingapp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.bank_mysql_dev.connectionManagerSettings.expireTimeout
+  : "1000"
