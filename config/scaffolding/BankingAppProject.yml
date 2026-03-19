@@ -78,7 +78,7 @@ configurationVariables:
   ? artConnection.BankingAppProject.project.bankingapp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.bank_mysql_dev.connectionSettings.user
   : scratch
   ? artConnection.BankingAppProject.project.bankingapp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.bank_mysql_dev.connectionSettings.password
-  : "{AES}Y5IgMqjfvkgbg7p5VUZztw=="
+  : "{AES}k2qAJdP9PhwpYvfXwLD4DA=="
   ? artConnection.BankingAppProject.project.bankingapp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.bankapp_mysql_dev.connectionManagerSettings.heartBeatInterval
   : "0"
   ? artConnection.BankingAppProject.project.bankingapp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.bank_mysql_dev.connectionSettings.otherProperties
