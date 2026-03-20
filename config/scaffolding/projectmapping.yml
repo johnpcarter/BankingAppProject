@@ -23,3 +23,15 @@ runtimes:
     uid: fld3d733edaa9f38fe130cd2
     stepId: a7
     reference: jc.banking.pub:verifyCustomerAndGetId
+- runtimeAlias: secure_enclave
+  assets:
+  - name: create account for customer
+    type: workflow
+    uid: fl237de58b39d4867496c41f
+    stepId: a0
+    reference: jc.banking.pub:verifyCustomerAndGetId
+  - name: create account for customer
+    type: workflow
+    uid: fl237de58b39d4867496c41f
+    stepId: a1
+    reference: jc.banking.pub:createAccountForUser
